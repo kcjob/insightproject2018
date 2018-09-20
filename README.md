@@ -1,9 +1,11 @@
 
 
 ## Project Summary:
-Though the overall system may seem simple and straight forward, there is always the chance of the system crashing. One of the most critical and valuable part of company’s infrastructure is it’s database.  The loss of data can be very costly in many ways other than just financial if the database crashes.
+The free online encyclopedia Wikipedia says:
+"The term Network Monitoring describes the use of a system that constantly monitors a computer network for slow or failing systems and that notifies the network administrator in case of outages via email, pager or other alarms."
 
-For my project, I increased the resiliency and integrity of the database so if it crashes, there will be no loss of data.
+For any company to grow and be successful, it is essential the it  establish a method of monitoring its network activity is essential to. This should include solutions that can automatically detect and respond to threats and performance issues in real time, as well as predict possible issues in the future.
+
 
 ## Project Description:
 The object of this project is to setup the infrastructure needed by a Data Engineer
@@ -28,9 +30,17 @@ __Ingestion:__ AWS S3
 __Data Processing:__ Spark   
 __Storage:__ MySQL    
 __User Interface (UI):__ Flask    
-__resiliency:__ Kubernetes and Docker    
+
+## Monitoring System:
+
+__Display__ Grafana
+__Monitoring System__ Prometheus
+
 
 <img src= img/architecture.jpg>
+
+<img src= img/architecture.jpg>
+
 
 ## Data Source
 
