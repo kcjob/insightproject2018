@@ -39,7 +39,7 @@ __Monitoring System__ Prometheus
 
 <img src= img/architecture.jpg>
 
-<img src= img/architecture.jpg>
+<img src= img/monitor_sys.jpg>
 
 
 ## Data Source
