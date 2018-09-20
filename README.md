@@ -33,8 +33,8 @@ __User Interface (UI):__ Flask
 
 ## Monitoring System:
 
-__Display__ Grafana
-__Monitoring System__ Prometheus
+__Display__ Grafana    
+__Monitoring System__ Prometheus    
 
 
 <img src= img/architecture.jpg>
