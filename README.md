@@ -49,8 +49,8 @@ __Monitoring System__ Prometheus
 ## References:
 __Prometheus__:     
 
-[Prometheus] (http://prometheus.io/)
-[How to use prometheus ](https://www.digitalocean.com/community/tutorials/how-to-use-prometheus-to-monitor-your-ubuntu-14-04-server)
-[ How to Install and Secure Grafana](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-16-04)
-[mysql_exporter](https://github.com/prometheus/mysqld_exporter)
-[Monitoring MySQL](https://dzone.com/articles/monitoring-mysql)
+[Prometheus] (http://prometheus.io/)    
+[How to use prometheus ](https://www.digitalocean.com/community/tutorials/how-to-use-prometheus-to-monitor-your-ubuntu-14-04-server)     
+[ How to Install and Secure Grafana](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-16-04)      
+[mysql_exporter](https://github.com/prometheus/mysqld_exporter)      
+[Monitoring MySQL](https://dzone.com/articles/monitoring-mysql)       
