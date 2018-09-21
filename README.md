@@ -1,5 +1,4 @@
 
-
 ## Project Summary:
 The free online encyclopedia Wikipedia says:
 "The term Network Monitoring describes the use of a system that constantly monitors a computer network for slow or failing systems and that notifies the network administrator in case of outages via email, pager or other alarms."
@@ -8,21 +7,17 @@ For any company to grow and be successful, it is essential the it  establish a m
 
 
 ## Project Description:
-The object of this project is to setup the infrastructure needed by a Data Engineer
-who in turn will create the environment for the application used by a Data Scientist to do the analysis stated above
-
-Additionally, adding some resiliency around the database will ensure if for example, there is a problem passing data to the database which causes it to crash, the system automatically compares the Write Ahead Log (WAL) against a buffer and inserts the difference into the database. Once this is done, the system restarts itself.
+The object of this project is to add the monitoring infrastructure to the data engineering pipeline.  This provides the reporting capability on the capacity and performance of the hardware and applications so you can know when you are running into issues as well use it for forecasting future needs.
 
 ## Project Challenge:
-1. Identifying the best buffering software
-2. Writing drivers that will write data to both MySQL and and ?? simultaneously
-3. Figuring out how to check Write Ahead Log (WAL) against buffered data and insert the difference into MySQL
-4. Restart the uploading process between Spark and MySQL
+1. Learning curve
 
-## Solution
+2. Identifying what needs to be monitored
+    * Creating a “visual” map of the most critical parts of the network
+    * avoiding information overload
 
-Write some drivers that will copy the data being add to the main (MySQL) database to a back-up database (redis) which will be used to update any missing data in the main database after the restart.   
-
+3. Deciding how to measure what is being monitored
+   * Setting base lines
 
 ## Data Pipeline:   
 
@@ -31,13 +26,14 @@ __Data Processing:__ Spark
 __Storage:__ MySQL    
 __User Interface (UI):__ Flask    
 
-## Monitoring System:
-
-__Display__ Grafana    
-__Monitoring System__ Prometheus    
-
 
 <img src= img/architecture.jpg>
+
+## Monitoring System:
+
+__Display__ Grafana       
+
+__Monitoring System__ Prometheus    
 
 <img src= img/monitor_sys.jpg>
 
