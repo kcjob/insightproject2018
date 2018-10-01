@@ -45,7 +45,7 @@ __Monitoring System__ Prometheus
 <img src= img/system_use_2018-09-30.png>
 
 
-<img src= img/alerting_2018-09-30 .png>
+<img src= img/alerting_2018-09-30.png>
 
 
 
