@@ -37,9 +37,23 @@ __Monitoring System__ Prometheus
 
 <img src= img/monitor_sys.jpg>
 
+<img src= img/connections_2018-09-30.png>
+
+<img src= img/monitor_sys.jpg>
+
+
+<img src= img/system_use_2018-09-30.png>
+
+
+<img src= img/alerting_2018-09-30 .png>
+
+
+
+
+
 
 ## Future Work:
-* Containerizing the monitoring system
+* Containerize the monitoring system
 * Add caching to the system
 
 ## Data Source
@@ -47,10 +61,9 @@ __Monitoring System__ Prometheus
 [New York City Parking Violations](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
 
 ## References:
-__Prometheus__:     
-
 [Prometheus] (http://prometheus.io/)    
 [How to use prometheus ] (https://www.digitalocean.com/community/tutorials/how-to-use-prometheus-to-monitor-your-ubuntu-14-04-server)     
 [ How to Install and Secure Grafana] (https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-16-04)      
 [mysql_exporter] (https://github.com/prometheus/mysqld_exporter)      
 [Monitoring MySQL] (https://dzone.com/articles/monitoring-mysql)       
+[Monitoring Read/Write Latency](https://sqlperformance.com/2015/03/io-subsystem/monitoring-read-write-latency)
