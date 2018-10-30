@@ -1,0 +1,74 @@
+SCRIPTS
+1. Connect to S3 from local drive: ./cloudconnect.sh
+2. Connect to database from cloud account: connect_to_database.sh
+3. Start flash server: flask_server.sh
+
+WORK FLOW
+1. Copy data to S3 bucket
+2. Copy data to spark
+3. Process data with spark
+4. Copy processed data to database
+5. Display query results.
+6. Configure Prometheus and Grafana
+
+
+
+# 1. copy file from local hrddrv to s3 bucket
+#--------------------------------------------
+aws s3 cp <file name> s3a://bucket name/<file name>
+
+aws s3 cp testfile.txt s3a://kcjtestbucket/mytestfile.txt
+
+
+# 2. Connect to EC2 cluster
+##-------------------------
+(use peg fetch cluster name to find master node address)
+ssh -i ~/ssh/pem file ubuntu@master ip address (ip address changes each time you spin up the cluster)
+
+ssh -i ~/.ssh/chrisj-IAM-keypair.pem ubuntu@ec2-34-214-185-144.us-west-2.compute.amazonaws.com
+
+
+# 3. Copy CSV data to spark (output as a data frame)
+#---------------------------------------------------
+dataFile = "s3a://nycparkingviolationdata/nycparkingViolations2014August2013June2014.csv"
+sc = SparkContext("local", "data file")
+sqlCon = SQLContext(sc)
+data_frame = sqlContext.read.csv(dataFile,header='True', inferSchema='True')
+
+# View a small sample of the file
+lines = data_frame.take(10)
+
+# Show data_frame results
+lines.show(n-2)
+
+# 4. Process data
+#-----------------
+df2 = data_frame.select(['Summons Number','Violation Code','Violation Location','Violation Precinct','Violation County','Violatio$
+
+
+print df2
+df2.show(n=2)
+
+# WRITE DATA TO DATABASE
+#-----------------------
+df2.write.format('jdbc').options(
+          url="jdbc:mysql://masterdb.ch0ib4epgaak.us-west-2.rds.amazonaws.com:3306/nycparkingdata",
+          driver="com.mysql.cj.jdbc.Driver",
+          dbtable="violations",
+          user="chrisj",
+          password="myparkingdata").mode('append').save()
+
+
+# Execute spark script
+#---------------------
+(Don't forget the driver!! Can embed in script in the SparkContext)
+spark-submit --jars /usr/local/spark/lib/mysql-connector-java-8.0.12.jar sparkupload.py
+
+# Connect to MySQL database
+#--------------------------
+mysql -h masterdb.ch0ib4epgaak.us-west-2.rds.amazonaws.com -P 3306 -u chrisj -p
+
+** RabbitMQ
+**---------
+Access RabbitMQ via GUI
+http://ec2-34-214-185-144.us-west-2.compute.amazonaws.com:15672/

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NYC Parking Violations</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Index</th>
+	<th>Violation Code</th>
+        <th>Violation Location</th>
+      </tr>
+         {% for item in demodata %}
+          <tr>
+            <td>{{ item[1]}}</td>
+            <td>{{ item[2]}}</td>
+            <td>{{ item[3]}}</td>
+          </tr>
+         {% endfor %}
+    </table>
+  </body>
+</html>
