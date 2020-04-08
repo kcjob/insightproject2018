@@ -3,7 +3,7 @@
 The free online encyclopedia Wikipedia says:
 "The term Network Monitoring describes the use of a system that constantly monitors a computer network for slow or failing systems and that notifies the network administrator in case of outages via email, pager or other alarms."
 
-For any company to grow and be successful, it is essential the it  establish a method of monitoring its network activity is essential to. This should include solutions that can automatically detect and respond to threats and performance issues in real time, as well as predict possible issues in the future.
+For any company to grow and be successful, it is essential the it  establish a method of monitoring its network activity. This should include solutions that can automatically detect and respond to threats and performance issues in real time, as well as predict possible issues in the future.
 
 
 ## Project Description:
